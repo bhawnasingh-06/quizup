@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+
+import QuestionState from './context/questions/QuestionState';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import Login from './components/Login';
+
+
+// import your route components too
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <QuestionState>
+        <Router>
+          <Navbar />
+          <div >
+          <div className="container my-3" >
+            <Routes>
+              <Route exact path="/" element={<Home/>} />
+              <Route exact path="/login" element={<Login/>} />
+
+              {/* <Route exact path="/"> <home/></Route> */}
+
+            </Routes>
+          </div>
+          </div>
+        </Router>
+      </QuestionState>
+    </>
+  )
 }
 
 export default App;
