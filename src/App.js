@@ -1,5 +1,7 @@
+import "./App.css";
 import React,{useState} from 'react';
 import Navbar from './components/Navbar';
+
 import Home from './components/Home';
 
 import QuestionState from './context/questions/QuestionState';
@@ -18,7 +20,7 @@ function App() {
   
   return (
     <>
-      <QuestionState>
+      {/* <QuestionState>
         <Router>
           <Navbar />
           <div >
@@ -27,13 +29,14 @@ function App() {
               <Route exact path="/" element={<Home/>} />
               <Route exact path="/login" element={<Login/>} />
 
-              {/* <Route exact path="/"> <home/></Route> */}
+              <Route exact path="/"> <home/></Route>
 
             </Routes>
           </div>
           </div>
         </Router>
-      </QuestionState>
+      </QuestionState> */}
+      <Home/>
     </>
   )
 }

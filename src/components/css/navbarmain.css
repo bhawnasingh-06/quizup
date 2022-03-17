@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+
+    --text-gray: #393a39;
+    --midnight: #104f55;
+    --Anton:'Roboto', serif;
+}
+.flexi-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+}
+.text-gray{
+    color: var(--text-gray);
+}
+.navi{
+    background: rgb(255, 254, 254);
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 12vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.navi .navi-menu{    
+    justify-content: space-between;
+}
+
+.navi .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.navi .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.navi .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse{
+    height: 30rem;
+}
+
+.navi .navi-items{
+    display: flex;
+    margin: 0;
+}
+
+.navi .navi-items .navi-link{
+    padding: 2rem 1.5rem;
+    position: relative;
+}
+.navi .navi-items .navi-link a{
+    text-decoration: none;
+    color: var(--text-gray);
+    font-family: var(--Anton);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.navi .navi-items .navi-link:hover{
+    background-color: var(--midnight);
+}
+
+.navi .navi-items .navi-link:hover a{
+    color: white;
+}
+
+.navi .navi-brand a{
+    font-size: 1.9rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Anton);
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+.navi .navi-brand img{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width:250px;
+    height: 85px;
+}
+.navi .social{
+    padding: 1.4rem 0
+}
+.navi .social i{
+    padding: 1.1rem 0.5rem;
+    color: var(--text-gray);
+}
+.navi .social i:hover{
+    color: #a1c4cf;
+}

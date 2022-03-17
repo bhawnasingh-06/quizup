@@ -1,0 +1,49 @@
+section#mybox {
+    background: linear-gradient(90deg, rgba(48,224,109,1) 4%, rgba(43,223,153,1) 17%, rgba(55,210,176,1) 36%, rgba(55,200,210,1) 56%, rgba(121,87,162,1) 92%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .mybox h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  .mybox h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45%;
+    margin: 0 20rem;
+    height: 1.5px;
+    background: rgb(255, 255, 255);
+  }
+  .mybox p {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+  .bttn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    
+  }
+  .bttn button{
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: gray;
+  }
+  .bttn button:hover{
+    transform: scale(1.1);
+  }
+  
+  
