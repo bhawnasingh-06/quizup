@@ -10,8 +10,8 @@ const Navbar = () => {
                 <a href="#" className="text-gray"><strong><i>QUIZUP</i></strong></a>
                 {/* <img src={logo} alt="quizuplogo" className="logo" /> */}
             </div>
-            <div className="toggle-collapse">
-                <div className="toggle-icons">
+            <div className="togggle-collapsse">
+                <div className="togggle-icons">
                     <i className="fas fa-bars"></i>
                 </div>
             </div>

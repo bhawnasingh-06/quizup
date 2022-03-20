@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{ useEffect }from 'react'
 import './css/topics.css'
 import calendar from './photos/pictures/calendar.jpg'
 import time from './photos/pictures/time.png'
@@ -8,7 +8,14 @@ import percentage from './photos/pictures/percentage.jpg'
 import probability from './photos/pictures/probability.png'
 import RatioandProportion from './photos/pictures/RatioandProportion.jpg'
 import simpleinterest from './photos/pictures/SimpleInterest.png'
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Topics = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 2000,
+        });
+      }, []);
     return (
         <div className="container-fluid" id="topics">
             <div className="heading">

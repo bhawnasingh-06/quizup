@@ -7,12 +7,13 @@ const Login = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch("http://localhost:5000/api/auth/adminlogin", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({email: credentials.email,password:credentials.password})
+            
         });
         const json = await response.json();  
         console.log(json); 
@@ -21,7 +22,7 @@ const Login = (props) => {
         {
             //save the auth token and redirect
             localStorage.setItem('token',json.authtoken);
-            navigate('/');
+            navigate('/admin');
             
 
         } 

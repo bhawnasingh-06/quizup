@@ -26,8 +26,8 @@ const Header = () => {
               QuizUp is an online learning platform to test your aptitude skills with a wide range of questions from various topics such as time , ratio and proportion , percentage, probability, logarithms, numbers, simple interest and many more.
             </p>
             <div className="header-cta">
-              <Button text={"Get Started"} btnClass={"btn-light"} href={"#"} />
-              <Button text={"How It Works"} btnClass={"btn-light"} href={"#"} />
+              <Button text={"Get Started"} btnClass={"buttn-light"} href={"#"} />
+              <Button text={"How It Works"} btnClass={"buttn-light"} href={"#"} />
             </div>
           </div>
           <div className="header-right" data-aos="fade-left">

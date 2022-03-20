@@ -3,7 +3,7 @@ import "./css/button.css";
 
 const Button = ({ text, btnClass, href }) => {
   return (
-    <a href={href} className={`btn ${btnClass}`}>
+    <a href={href} className={`buttn ${btnClass}`}>
       {text}
     </a>
   );

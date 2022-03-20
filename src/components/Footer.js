@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   return (
     <section id="footer">
-      <div className="container footer">
+      <div className="mycontainer footer">
         <div className="footer-box">
           <h4>Useful Links</h4>
           <div className="footer-links">

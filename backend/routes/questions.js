@@ -13,6 +13,15 @@ router.get('/fetchallquestions', fetchAdmin, async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 })
+router.get('/fetchalluserquestions',async (req, res) => {
+    try {
+        const questions = await Question.find();
+        return res.json(questions)
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+})
 //ROUTE 2: Add a new question using POST : Get"/api/questions/addquestion": login required
 router.post('/addquestion', fetchAdmin, [
     body('questiondesc'),

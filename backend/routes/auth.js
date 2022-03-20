@@ -55,7 +55,7 @@ router.post('/createAdmin',[
 
 
 //ROUTE 2:Authenticate admin using POST "/api/auth/login":  login required
-router.post('/login',[
+router.post('/adminlogin',[
   body('email','Enter a valid email').isEmail(),
   body('password','Password cannot be blank').exists(),
   

@@ -19,13 +19,13 @@ section#subscribe {
     padding-bottom: 1rem;
   }
   
-  form > * {
+  .sform > * {
     width: 70%;
     max-width: 40rem;
     margin: 1.5rem auto;
   }
   
-  form input {
+  .sform input {
     padding: 1rem;
     background: transparent;
     border: 1px solid #777;
@@ -36,7 +36,7 @@ section#subscribe {
     font-size: 1.2rem;
   }
   
-  form button {
+  .sform button {
     padding: 1rem;
     background:#104f55;
     border: 1px solid #104f55;
@@ -72,7 +72,7 @@ section#subscribe {
   }
   
   @media screen and (max-width: 600px) {
-    form input {
+    sform input {
       width: 60%;
     }
   }

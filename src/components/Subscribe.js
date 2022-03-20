@@ -17,7 +17,7 @@ const Subscribe = () => {
       <div className="container subscribe" data-aos="fade-up">
         <h2>Stay tuned!</h2>
         <h4>Subscribe to our newsletter and receive the latest news from QuizUp </h4>
-        <form>
+        <form className="sform">
           <div className="form-control">
             <input type="text" placeholder="Enter Your Email..." />
             <button>Subscribe</button>

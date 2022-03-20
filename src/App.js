@@ -1,9 +1,8 @@
-import "./App.css";
+
 import React,{useState} from 'react';
+import FirstPage from "./components/FirstPage"
 import Navbar from './components/Navbar';
-
-import Home from './components/Home';
-
+import HomeAdmin from './components/HomeAdmin';
 import QuestionState from './context/questions/QuestionState';
 
 import {
@@ -12,31 +11,24 @@ import {
   Route
 } from "react-router-dom";
 import Login from './components/Login';
+import HomeUser from './components/HomeUser';
+import AdminPageRoute from './components/AdminPageRoute';
 
 
 // import your route components too
 
 function App() {
-  
+  const [role,setRole]=useState();
   return (
     <>
-      {/* <QuestionState>
-        <Router>
-          <Navbar />
-          <div >
-          <div className="container my-3" >
-            <Routes>
-              <Route exact path="/" element={<Home/>} />
-              <Route exact path="/login" element={<Login/>} />
-
-              <Route exact path="/"> <home/></Route>
-
-            </Routes>
-          </div>
-          </div>
-        </Router>
-      </QuestionState> */}
-      <Home/>
+    <Router>
+    <Routes>
+     <Route exact path ="/" element={<FirstPage role={role} setRole={setRole}/>}/> 
+     {role==="Admin"?<Route exact path="/adminhome/*" element={<AdminPageRoute/>}/>: <Route exact path="/user" element={<HomeUser/>} />}
+    </Routes>
+    </Router>
+    
+    
     </>
   )
 }

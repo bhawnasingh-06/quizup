@@ -19,6 +19,12 @@
   .header h1 span {
     display: block;
   }
+  .u-text-small {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+  
   
   h1 span:nth-child(1) {
     font-weight: 700;

@@ -30,7 +30,7 @@ ul{
     justify-content: space-between;
 }
 
-.navi .toggle-collapse{
+.navi .togggle-collapsse{
     position: absolute;
     top: 0%;
     width: 90%;
@@ -38,18 +38,18 @@ ul{
     display: none;
 }
 
-.navi .toggle-collapse .toggle-icons{
+.navi .togggle-collapsse .togggle-icons{
     display: flex;
     justify-content: flex-end;
     padding: 1.7rem 0;
 }
 
-.navi .toggle-collapse .toggle-icons i{
+.navi .togggle-collapsse .togggle-icons i{
     font-size: 1.4rem;
     color: var(--text-gray);
 }
 
-.collapse{
+.collapsse{
     height: 30rem;
 }
 

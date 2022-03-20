@@ -12,7 +12,7 @@ const Questions = (props) => {
       getQuestion();
     }
     else{
-      navigate("/login");
+      navigate("/adminlogin");
     }
     
     // eslint-disable-next-line
@@ -91,7 +91,7 @@ const Questions = (props) => {
       <div className=" row my-5 mx-1">
         <h2 >Total Questions</h2>
         <div className="cotainer mx-2">
-        {questions.length===0 && 'No notes to display!'}
+        {questions.length===0 && 'No questions to display!'}
         </div>
 
         {questions.map((question) => {
