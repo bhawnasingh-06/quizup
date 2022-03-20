@@ -1,24 +1,13 @@
 
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate
-} from "react-router-dom";
-import Navbar from './Navbar';
-
-import HomeAdmin from './HomeAdmin';
-import Login from './Login';
-import QuestionState from '../context/questions/QuestionState';
-import HomeUser from "./HomeUser";
+import { useNavigate} from "react-router-dom";
 import backgroundImage from "./photos/background.png";
 const FirstPage = ({role,setRole}) => {
   let navigate = useNavigate();
   const handleRoleAdmin =  ()=>{
     setRole("Admin");
     console.log({role});
-    navigate("/adminhome")
+    navigate("/admin/login")
   }
   
   const handleRoleUser = ()=>{

@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const handleLogout = ()=>{
     localStorage.removeItem('token');
-    navigate('/adminlogin');
+    navigate('/admin/login');
   }
   let location=useLocation();
   useEffect(() => {
@@ -15,20 +15,16 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark" >
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/admin">QuizUp</Link>
+    <Link className="navbar-brand" to="/admin/adminhome">QuizUp</Link>
    
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className={`nav-link ${location.pathname==="/admin"?"active":""}` } aria-current="page" to="/admin">Home</Link>
+          <Link className={`nav-link ${location.pathname==="/admin/adminhome"?"active":""}` } aria-current="page" to="/adminhome">Home</Link>
         </li>
-        {/* <li className="nav-item">
-          <Link className={`nav-link ${location.pathname==="/About"?"active":""}` } to="/About">About</Link>
-        </li> */}
-        
       </ul>
       {!localStorage.getItem('token')?<form className="d-flex">
-        <Link className="btn btn-light mx-2" to="/adminlogin" type="submit">Login</Link>
+        <Link className="btn btn-light mx-2" to="/admin/login" type="submit">Login</Link>
         {/* <Link className="btn btn-light mx-2" to="/signup" type="submit">Sign Up</Link> */}
       </form>:<button onClick={handleLogout} className="btn btn-light mx-2">Logout</button>}
     </div>

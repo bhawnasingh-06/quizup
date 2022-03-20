@@ -1,6 +1,5 @@
 import React from 'react'
 import './css/navbarmain.css';
-import logo from './photos/logo.png'
 const Navbar = () => {
   return (
     
@@ -8,7 +7,6 @@ const Navbar = () => {
         <div className="navi-menu flexi-row">
             <div className="navi-brand">
                 <a href="#" className="text-gray"><strong><i>QUIZUP</i></strong></a>
-                {/* <img src={logo} alt="quizuplogo" className="logo" /> */}
             </div>
             <div className="togggle-collapsse">
                 <div className="togggle-icons">

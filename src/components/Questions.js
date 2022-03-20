@@ -12,7 +12,7 @@ const Questions = (props) => {
       getQuestion();
     }
     else{
-      navigate("/adminlogin");
+      navigate("/admin/login");
     }
     
     // eslint-disable-next-line
