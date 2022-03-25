@@ -1,0 +1,36 @@
+.callout {
+    padding-top: 5rem;
+    max-width: 800px;
+    margin:auto;
+    
+    font-size: 20px;
+}
+
+
+/* Callout header */
+
+.callout-header {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 35px 25px;
+    background: #555;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+
+/* Callout container/body */
+
+.callout-container {
+    padding: 25px;
+    background-color: #ccc;
+    color: black;
+    
+}
+
+.btn-secondary {
+    font-size: 30px;
+    padding: 5px 5rem;
+    margin:auto;
+}

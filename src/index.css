@@ -8,9 +8,9 @@
   scroll-behavior: smooth;
 }
 
-/* html {
-  font-size: 10px;
-} */
+ html {
+ scroll-behavior: smooth;
+} 
 
 body {
   font-family: sans-serif, cursive;

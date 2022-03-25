@@ -22,13 +22,14 @@ const Login = (props) => {
         {
             //save the auth token and redirect
             localStorage.setItem('token',json.authtoken);
+            props.showAlert("Logged in successfully :)", "success");
             navigate('/admin/adminhome');
             
 
         } 
         else
         {
-            console.log("Wrong admin details!")
+          props.showAlert("Invalid details :(", "danger");
         }
     }
     const onchange = (e) => {

@@ -1,35 +1,45 @@
 
 import React from "react";
 import { useNavigate} from "react-router-dom";
-import backgroundImage from "./photos/background.png";
+import "./css/header.css";
+import firstpage from "./photos/firstpage.webp";
+import "./css/button.css";
 const FirstPage = ({role,setRole}) => {
   let navigate = useNavigate();
   const handleRoleAdmin =  ()=>{
     setRole("Admin");
     console.log({role});
     navigate("/admin/login")
+    localStorage.removeItem('token');
   }
   
   const handleRoleUser = ()=>{
     setRole("User");
     console.log({role});
     navigate("/user")
+    localStorage.removeItem('token');
   }
   return (
-    <div className="container-fluid" style={{height: "100vh",background: `linear-gradient(to top, rgba(0,0,0,1), rgba(0.1,0.1,0.1,0.5)),url(${backgroundImage}) no-repeat center center/cover`,}}>
-      <p  style={{padding:"8rem 0 0 20rem",fontSize: "3.5rem",fontWeight:"bolder",color: "white",zIndex: "2",fontFamily:"sansSerif"}}>
-          HEY! WELCOME TO QUIZUP
-      </p>
-      <p style={{padding:"0 0 0 16rem",fontSize: "3rem",color: "white",zIndex: "2",fontFamily:"sansSerif"}}>
-          Please select your role to continue with QuizUP.
-      </p>
-      
-      <button onClick={handleRoleUser} style={{padding: "0.5rem 3rem", margin: "3rem 0 0 32rem",fontSize: "1.5rem",fontFamily:"sansSerif"}} type="button" className="btn btn-light shadow mb-4 bg-white rounded">USER</button>
+    <section id="header">
+        <div className="container header">
+          <div className="header-left">
+            <h1 style={{fontSize:"2.6rem"}}>
+              <span>Welcome to an online learning platform<span style={{color:"#FFDB58"}}>QUIZUP!</span></span>
+            </h1>
+            <p style={{fontSize:"1.4rem"}}>
+              Please select your role to continue with QuizUp.
+            </p>
+            <div className="header-cta">
+            <button onClick={handleRoleUser} type="button" className="btn-grad shadow">USER</button>
 
-      <button onClick={handleRoleAdmin} style={{padding: "0.5rem 3rem",margin: "3rem 0 0 4rem",fontSize: "1.5rem",fontFamily:"sansSerif"}} type="button" className="btn btn-light shadow mb-4 bg-white rounded">ADMIN</button>
-      
-     
-    </div>
+            <button onClick={handleRoleAdmin}  type="button" className="btn-grad shadow">ADMIN</button> 
+            </div>
+          </div>
+          <div className="header-right" >
+            <img src={firstpage} alt="quiz" style={{maxWidth:"80vh"}} />
+          </div>
+        </div>
+      </section> 
   );
 };
 

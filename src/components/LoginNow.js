@@ -2,8 +2,21 @@ import React, { useEffect } from 'react'
 import "./css/loginnow.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from 'react-router-dom';
 
-const LoginNow = () => {
+
+const LoginNow = ({fetchQuestions}) => {
+  let navigate = useNavigate();
+  const handlelogin =()=>{
+    navigate("/login")
+  }
+  const handlesignup =()=>{
+    navigate("/signup")
+  }
+  const handlestart =()=>{
+    fetchQuestions();
+    navigate("/quizrules")
+  }
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -16,10 +29,13 @@ const LoginNow = () => {
         <p className="u-text-small">
           If you want to test your aptitude skills and improve yourself, create a an account with us or login to the one you already have.
         </p>
-        <div className="bttn">
-          <button type="button" class="btn btn-light shadow mb-4 bg-white">LOG IN NOW</button>
-          <button type="button" class="btn btn-light shadow mb-4 bg-white">SIGN UP NOW</button>
-        </div>
+        {!localStorage.getItem('token')?<div className="bttn">
+          <button onClick={handlelogin} type="button" class="btn btn-light shadow mb-4 bg-white">LOG IN NOW</button>
+          <button onClick={handlesignup} type="button" class="btn btn-light shadow mb-4 bg-white">SIGN UP NOW</button>
+        </div>:<div className="bttn">
+          <button onClick={handlestart} type="button" class="btn btn-light shadow mb-4 bg-white">START THE QUIZ</button>
+        </div>}
+        
       </div>
     </section>
   );

@@ -10,6 +10,7 @@ app.use(cors())
 app.use(express.json())
 //Available routes
 app.use('/api/auth',require('./routes/auth'))
+app.use('/api/users', require('./routes/authUsers'))
 app.use('/api/questions',require('./routes/questions'))
 
 app.get('/', (req,res) =>{
