@@ -4,19 +4,19 @@ var cors = require('cors')
 const express = require('express')
 const app = express()
 const port = 5000
-    //var app = express()
+//var app = express()
 
 app.use(cors())
 app.use(express.json())
-    //Available routes
-app.use('/api/auth', require('./routes/auth'))
-app.use('/api/authUsers', require('./routes/authUsers'))
-app.use('/api/questions', require('./routes/questions'))
+//Available routes
+app.use('/api/auth',require('./routes/auth'))
+app.use('/api/users', require('./routes/authUsers'))
+app.use('/api/questions',require('./routes/questions'))
 
-app.get('/', (req, res) => {
+app.get('/', (req,res) =>{
     res.send("Hello world");
 })
 
 app.listen(port, () => {
-    console.log(`QuizUp app listening on port http://localhost:${port}`)
+  console.log(`QuizUp app listening on port http://localhost:${port}`)
 })

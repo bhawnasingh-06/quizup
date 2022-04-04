@@ -16,7 +16,7 @@
     "express-handlebars": "^6.0.2",
     "express-validator": "^6.14.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.8"
+    "mongoose": "^6.2.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

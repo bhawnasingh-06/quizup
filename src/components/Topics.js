@@ -22,7 +22,7 @@ const Topics = () => {
                 <h1>Our Top Topics</h1>
                 <h5>Test your skills with our top topics like average, percentage, time, number, distance, simple interest etc. with a variaty of questions set for beginners and seniors alike!</h5>
             </div>
-            <div className="img-area" id="topic">
+            <div className="img-area">
                 <div className="single-img"><img src={calendar} alt="" /></div>
                 <div className="single-img"><img src={time} alt="" /></div>
                 <div className="single-img"><img src={logarithm} alt="" /></div>

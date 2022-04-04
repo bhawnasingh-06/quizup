@@ -128,4 +128,3 @@ export default QuizQuestion;
           </div>
         </div>
       </div> */}
-

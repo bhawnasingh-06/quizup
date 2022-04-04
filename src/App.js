@@ -12,7 +12,6 @@ import Quiz from "./components/Quiz";
 import QuizRules from "./components/QuizRules"
 import axios from "axios";
 import Alert from "./components/Alert";
-import Account from "./components/Account";
 function App() {
   const [role, setRole] = useState();
   const [questions, setQuestions] = useState();
@@ -67,11 +66,6 @@ function App() {
                       
                       </>
                       )}
-
-                     
-                      
-                        <Route  exact path="/account" element={<Account/>}></Route>
-                      
         </Routes>
       </Router>
     </>
