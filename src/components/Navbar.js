@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className={`nav-link ${location.pathname==="/admin/adminhome"?"active":""}` } aria-current="page" to="/adminhome">Home</Link>
+          <Link className={`nav-link ${location.pathname==="/admin/adminhome"?"active":""}` } aria-current="page" to="/admin/adminhome">Home</Link>
         </li>
       </ul>
       {!localStorage.getItem('token')?<form className="d-flex">

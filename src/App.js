@@ -12,6 +12,7 @@ import Quiz from "./components/Quiz";
 import QuizRules from "./components/QuizRules"
 import axios from "axios";
 import Alert from "./components/Alert";
+import PageNotFound from "./components/PageNotFound"
 function App() {
   const [role, setRole] = useState();
   const [questions, setQuestions] = useState();
@@ -49,6 +50,7 @@ function App() {
                       <Routes>
                         <Route exact path="/adminhome" element={<HomeAdmin />} />
                         <Route exact path="/login" element={<Login showAlert={showAlert}/>} />
+                        <Route path="*" element={<PageNotFound/>} />
                       </Routes>
                       </div>
                   </div>
@@ -63,6 +65,7 @@ function App() {
                       <Route exact path="/quiz" element={<Quiz questions={questions} score={score} setScore={setScore}
                        setQuestions={setQuestions} />}/>
                       {/* <Route exact path="/result" element={<Result score={score} />}/> */}
+                      <Route path="*" element={<PageNotFound/>} />
                       
                       </>
                       )}

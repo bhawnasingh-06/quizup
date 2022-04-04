@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate} from "react-router-dom";
 import "./css/header.css";
 import firstpage from "./photos/firstpage.webp";
-import "./css/button.css";
+
 const FirstPage = ({role,setRole}) => {
   let navigate = useNavigate();
   const handleRoleAdmin =  ()=>{
@@ -24,7 +24,7 @@ const FirstPage = ({role,setRole}) => {
         <div className="container header">
           <div className="header-left">
             <h1 style={{fontSize:"2.6rem"}}>
-              <span>Welcome to an online learning platform<span style={{color:"#FFDB58"}}>QUIZUP!</span></span>
+              <span>Welcome to an online learning platform<span style={{color:"#e1ad01"}}>QUIZUP!</span></span>
             </h1>
             <p style={{fontSize:"1.4rem"}}>
               Please select your role to continue with QuizUp.
@@ -36,7 +36,7 @@ const FirstPage = ({role,setRole}) => {
             </div>
           </div>
           <div className="header-right" >
-            <img src={firstpage} alt="quiz" style={{maxWidth:"80vh"}} />
+            <img src={firstpage} alt="quiz" style={{maxWidth:"100vh"}} />
           </div>
         </div>
       </section> 
