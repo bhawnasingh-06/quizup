@@ -1,0 +1,30 @@
+.modal-header {
+    color: white;
+    background-color: black;
+}
+
+.btn-outline-success {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+}
+
+.label {
+    font-weight: bold;
+}
