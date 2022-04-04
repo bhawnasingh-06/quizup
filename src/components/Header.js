@@ -32,7 +32,7 @@ const Header = () => {
         </div>
       </section>
       <div className="container-fluid shadow mb-5" style={{ background: "#104f57", height: "130px" }}>
-        <h2 style={{
+        <h2 id ="mainheader" style={{
           padding: "1.5rem 0rem 0rem 7rem",
           fontSize: " 2.2rem", fontFamily: "Roboto", color: "white"
         }}>Want to test your aptitude skills now!</h2>
@@ -40,7 +40,7 @@ const Header = () => {
           padding: "0rem 0rem 0rem 7rem",
           fontSize: " 1.4rem", fontFamily: "Roboto", color: "white"
         }}>Take a quick quiz and get the instant results.</h4>
-        <a style={{
+        <a  style={{
           padding: "0.5rem 1.8rem",
           margin: "-5rem 4rem 0rem 70rem" 
         }} href="#mybox" type="button" class="btn btn-light shadow mb-4 bg-white rounded">TRY IN OUT NOW</a>

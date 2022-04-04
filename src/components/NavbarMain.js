@@ -1,12 +1,18 @@
 import React from 'react'
 import './css/navbarmain.css';
+import "./css/button.css";
+import { Button } from 'bootstrap';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
+
+
+
   return (
     
       <nav className="navi shadow mb-4 bg-white rounded">
         <div className="navi-menu flexi-row">
             <div className="navi-brand">
-                <a href="#" className="text-gray"><strong><i>QUIZUP</i></strong></a>
+                <a href="/" className="text-gray"><strong><i>QUIZUP</i></strong></a>
             </div>
             <div className="togggle-collapsse">
                 <div className="togggle-icons">
@@ -14,32 +20,38 @@ const Navbar = () => {
                 </div>
             </div>
             <div>
-                <ul className="navi-items">
+            <ul className="navi-items">
                     <li className="navi-link">
-                        <a href="#">Home</a>
+                    <a href="#mainheader">Home</a>
+                        
+                      
                     </li>
                     <li className="navi-link">
-                        <a href="#">About</a>
+                    <a href="#feature">About</a>
+
+                   
                     </li>
                     <li className="navi-link">
-                        <a href="#">Quiz</a>
+                        <a href="#mybox">Quiz</a>
                     </li>
                     <li className="navi-link">
-                        <a href="#">Know More</a>
+                        <a href="#topic">Know More</a>
                     </li>
                     <li className="navi-link">
-                        <a href="#">Contact Us</a>
+                        <a href="#contact">Contact Us</a>
                     </li>
                 </ul>
             </div>
             <div className="social text-gray">
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-youtube"></i></a>
+                
+               < Link to="/account">< i className="fas fa-user-alt" ></i> </Link>
+                	
             </div>
         </div>
     </nav>
+
+
+
 
       
   
