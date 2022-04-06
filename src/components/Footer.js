@@ -16,12 +16,11 @@ const Footer = () => {
         <div className="footer-box">
           <h4>Useful Links</h4>
           <div className="footer-links">
-            <a href="#">&bull; Support</a>
-            <a href="#">&bull; Home</a>
-            <a href="#">&bull; About</a>
-            <a href="#">&bull; Learn</a>
-            <a href="#">&bull; Take Quiz</a>
-            <a href="#">&bull; Know More</a>
+            <a href="#header">&bull; Home</a>
+            <a href="#features">&bull; About</a>
+            <a href="#topics">&bull; Topics</a>
+            <a href="#mybox">&bull; Take Quiz</a>
+            <a href="#subscribe">&bull; Know More</a>
           </div>
         </div>
         <div className="footer-box">

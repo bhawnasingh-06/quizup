@@ -12,7 +12,9 @@ import Quiz from "./components/Quiz";
 import QuizRules from "./components/QuizRules"
 import axios from "axios";
 import Alert from "./components/Alert";
-import PageNotFound from "./components/PageNotFound"
+import PageNotFound from "./components/PageNotFound";
+import Result from "./components/Result";
+import Feedback from "./components/Feedback"
 function App() {
   const [role, setRole] = useState();
   const [questions, setQuestions] = useState();
@@ -62,9 +64,9 @@ function App() {
                       <Route exact path="/login" element={<LoginUser showAlert={showAlert}/>} />
                       <Route exact path="/signup" element={<Signup showAlert={showAlert}/>} />
                       <Route exact path="quizrules" element={<QuizRules/>}/>
-                      <Route exact path="/quiz" element={<Quiz questions={questions} score={score} setScore={setScore}
-                       setQuestions={setQuestions} />}/>
-                      {/* <Route exact path="/result" element={<Result score={score} />}/> */}
+                      <Route exact path="/quiz" element={<Quiz questions={questions} score={score} setScore={setScore} setQuestions={setQuestions} />}/>
+                      <Route exact path="/result" element={<Result score={score} questions={questions}/>}/> 
+                      <Route exact path="/feedback" element={<Feedback />}/> 
                       <Route path="*" element={<PageNotFound/>} />
                       
                       </>

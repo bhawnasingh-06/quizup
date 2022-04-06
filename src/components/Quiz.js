@@ -26,11 +26,6 @@ const Quiz = ({questions, score, setScore, setQuestions }) => {
       <span className="subtitle">Welcome UserName</span>
       {questions ? (
         <>
-          <div className="quizInfo">
-            <span>
-              Score : {score}
-            </span>
-          </div>
           <QuizQuestion
             currQues={currQues}
             setCurrQues={setCurrQues}
