@@ -15,6 +15,7 @@ import Alert from "./components/Alert";
 import PageNotFound from "./components/PageNotFound";
 import Result from "./components/Result";
 import Feedback from "./components/Feedback"
+import FetchUsers from "./components/FetchUsers"
 function App() {
   const [role, setRole] = useState();
   const [questions, setQuestions] = useState();
@@ -40,7 +41,7 @@ function App() {
   }
   return (
     <>
-      <Router>
+    <Router>
         <Routes>
           <Route exact path="/" element={<FirstPage role={role} setRole={setRole} />}/>
           {role === "Admin" ? (<Route exact path="/admin/*" element={
@@ -51,6 +52,7 @@ function App() {
                       <div className="container">
                       <Routes>
                         <Route exact path="/adminhome" element={<HomeAdmin />} />
+                        <Route exact path="/adminfetchusers" element={<FetchUsers />} />
                         <Route exact path="/login" element={<Login showAlert={showAlert}/>} />
                         <Route path="*" element={<PageNotFound/>} />
                       </Routes>
@@ -72,7 +74,7 @@ function App() {
                       </>
                       )}
         </Routes>
-      </Router>
+      </Router> 
     </>
   );
 }

@@ -121,4 +121,16 @@ router.post('/getUsers', fetchUsers, async(req, res) => {
     }
 })
 
+//ROUTE 4: Fetch all users : : post '/api/authusers/fetchallusers'
+
+router.get('/fetchallusers', async(req, res) => {
+    try {
+        const users = await Users.find()
+        return res.json(users)
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+})
+
 module.exports = router;

@@ -33,7 +33,7 @@ const QuizQuestion = ({
   };
 
   const handleNext = () => {
-    if (currQues >=3 && selected) {
+    if (currQues >= (questions.length-1) && selected) {
        history("/result");
     } else if (selected) {
       setCurrQues(currQues + 1);
@@ -44,10 +44,11 @@ const QuizQuestion = ({
   const handleQuit = () => {
     setCurrQues(0);
     setQuestions();
+    history("/user")
   };
 
   return (
-    <div className="question">
+    <div className="question my-4">
       <h1>Question {currQues + 1} :</h1>
 
       <div className="singleQuestion">
@@ -84,7 +85,7 @@ const QuizQuestion = ({
             style={{ width: 185 }}
             onClick={handleNext}
           >
-            {currQues >2 ? "Submit" : "Next Question"}
+            {currQues === (questions.length-1) ? "Submit" : "Next Question"}
           </Button>
         </div>
       </div>

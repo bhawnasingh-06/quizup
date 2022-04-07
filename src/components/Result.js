@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Result(props) {
     let navigate = useNavigate();
-    let percent = (props.score / props.questions.length * 100);
+    let percent = Math.ceil((props.score / props.questions.length * 100));
     if(percent <= 30 ) {
         var remark = "You need to work hard! 😔"
     } else if( percent>30 &&percent<= 50) {

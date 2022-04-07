@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./css/header.css";
-import Button from "./Button";
 import "./css/button.css";
 import MainImage from './photos/picture.jpg'
 import AOS from "aos";

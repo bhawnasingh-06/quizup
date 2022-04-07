@@ -15,12 +15,15 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark" >
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/admin/adminhome">QuizUp</Link>
+    <Link className="navbar-brand" to="">QuizUp</Link>
    
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className={`nav-link ${location.pathname==="/admin/adminhome"?"active":""}` } aria-current="page" to="/admin/adminhome">Home</Link>
+          <Link className={`nav-link ${location.pathname==="/admin/adminhome"?"active":""}` } aria-current="page" to="/admin/adminhome">Questions</Link>
+        </li>
+        <li className="nav-item">
+          <Link className={`nav-link ${location.pathname==="/admin/adminfetchusers"?"active":""}` } aria-current="page" to="/admin/adminfetchusers">Users</Link>
         </li>
       </ul>
       {!localStorage.getItem('token')?<form className="d-flex">
