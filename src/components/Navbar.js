@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark" >
   <div className="container-fluid">
-    <Link className="navbar-brand" to="">QuizUp</Link>
+    <h4 style={{color:"white",margin:"0rem 2rem 0rem 2rem"}}>QuizUp</h4>
    
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -24,6 +24,9 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <Link className={`nav-link ${location.pathname==="/admin/adminfetchusers"?"active":""}` } aria-current="page" to="/admin/adminfetchusers">Users</Link>
+        </li>
+        <li className="nav-item">
+          <Link className={`nav-link ${location.pathname==="/admin/adminfetchfeedbacks"?"active":""}` } aria-current="page" to="/admin/adminfetchfeedbacks">Feedbacks</Link>
         </li>
       </ul>
       {!localStorage.getItem('token')?<form className="d-flex">

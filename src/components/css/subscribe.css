@@ -1,79 +1,11 @@
+
 section#subscribe {
     background: linear-gradient(to top, rgba(0,0,0,1), rgba(0.1,0.1,0.1,0.6)),url(../photos/picture.webp);
     text-align: center;
     color: #fff;
     background-size: cover;
     background-attachment: fixed;
+    font-family:  cursive;
   }
   
-  .subscribe h2 {
-    font-size: 2rem;
-    font-weight: 150;
-    line-height: 1.4;
-    text-transform: uppercase;
-    margin: 1.5rem 0;
-    padding-bottom: 1rem;
-  }
-  .subscribe h4 {
-    margin: 1.5rem 0;
-    padding-bottom: 1rem;
-  }
-  
-  .sform > * {
-    width: 70%;
-    max-width: 40rem;
-    margin: 1.5rem auto;
-  }
-  
-  .sform input {
-    padding: 1rem;
-    background: transparent;
-    border: 1px solid #777;
-    border-radius: 5px 0 0 5px;
-    color: #fff;
-    outline: none;
-    width: 80%;
-    font-size: 1.2rem;
-  }
-  
-  .sform button {
-    padding: 1rem;
-    background:#104f55;
-    border: 1px solid #104f55;
-    border-radius: 0 5px 5px 0;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 300;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .social-icon {
-    margin: 2rem;
-    padding: 1rem;
-    width: 4rem;
-    height: 4rem;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  
-  .social-icon:hover {
-    background:#104f55;
-  }
-  
-  @media screen and (max-width: 600px) {
-    sform input {
-      width: 60%;
-    }
-  }
   

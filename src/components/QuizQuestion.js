@@ -1,5 +1,5 @@
 import { Button } from "@material-ui/core";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useNavigate } from "react-router";
 import ErrorMessage from "./ErrorMessage"
 import "./css/quizQuestion.css";
@@ -46,10 +46,26 @@ const QuizQuestion = ({
     setQuestions();
     history("/user")
   };
+  const [seconds, setSeconds] = useState(120);
+  useEffect(() => {
+    let interval = null;
+      interval = setInterval(() => {
+        setSeconds(seconds => seconds - 1);
+      }, 1000);
+      if ( seconds === 0) {
+      clearInterval(interval);
+      history("/result");
+    }
+    return () => clearInterval(interval);
+  }, [ seconds]);
 
   return (
     <div className="question my-4">
-      <h1>Question {currQues + 1} :</h1>
+      <h1>Question {currQues + 1} of {questions.length}</h1>
+      <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">{seconds} s</div>
+            </div>
 
       <div className="singleQuestion">
         <h2>{questions[currQues].questiondesc}</h2>

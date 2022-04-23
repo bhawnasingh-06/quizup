@@ -12,6 +12,7 @@ app.use(express.json())
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/users', require('./routes/authUsers'))
 app.use('/api/questions',require('./routes/questions'))
+app.use('/api/feedback',require('./routes/feed'))
 
 app.get('/', (req,res) =>{
     res.send("Hello world");

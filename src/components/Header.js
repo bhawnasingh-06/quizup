@@ -42,7 +42,7 @@ const Header = () => {
         <a style={{
           padding: "0.5rem 1.8rem",
           margin: "-5rem 4rem 0rem 70rem" 
-        }} href="#mybox" type="button" class="btn btn-light shadow mb-4 bg-white rounded">TRY IN OUT NOW</a>
+        }} href="#mybox" type="button" class="btn btn-light shadow mb-4 bg-white rounded">TRY IT OUT NOW</a>
       </div>
     </>
   );

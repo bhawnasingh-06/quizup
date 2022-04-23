@@ -15,6 +15,7 @@
     border: 5px solid grey;
     padding: 20px;
     margin-top: 10px;
+    border-radius: 5px;
   }
   
   .options {
@@ -58,4 +59,35 @@
     color: white;
     box-shadow: 0 0 1px black;
   }
-  
+  .timer{
+    color: #000102;
+    background: #ffffff;
+    height: 45px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 155px;
+    border: 1px solid black;
+    box-shadow: 4px 4px 2px black;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+.timer .time_left_txt{
+  font-weight: 400;
+  font-size: 17px;
+  user-select: none;
+}
+.timer .timer_sec{
+  font-size: 18px;
+  font-weight: 500;
+  height: 30px;
+  width: 55px;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  background: #343a40;
+  border: 1px solid #343a40;
+  user-select: none;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-class FetchUsers extends React.Component {
+class FetchFeedback extends React.Component {
   constructor(props) {
     super(props);
 
@@ -9,7 +9,7 @@ class FetchUsers extends React.Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:5000/api/users/fetchallusers")
+    fetch("http://localhost:5000/api/feedback/getallfeedbacks")
       .then((res) => res.json())
       .then((json) => {
         this.setState({
@@ -34,9 +34,8 @@ class FetchUsers extends React.Component {
           <thead>
             <tr>
               <th scope="col">USER ID</th>
-              <th scope="col">REGISTERED ON</th>
-              <th scope="col">USER NAME</th>
-              <th scope="col">EMAIL ID</th>
+              <th scope="col">FEEDBACK SENT ON</th>
+              <th scope="col">MESSAGE</th>
             </tr>
           </thead>
           <tbody>
@@ -44,11 +43,10 @@ class FetchUsers extends React.Component {
               <>
                 <tr>
                   <th scope="row" key={item.id}>
-                    {item._id}
+                    {item.user}
                   </th>
                   <td>{item.date}</td>
-                  <td>{item.username}</td>
-                  <td>{item.email}</td>
+                  <td>{item.msg}</td>
                 </tr>
               </>
             ))}
@@ -59,4 +57,4 @@ class FetchUsers extends React.Component {
   }
 }
 
-export default FetchUsers;
+export default FetchFeedback;

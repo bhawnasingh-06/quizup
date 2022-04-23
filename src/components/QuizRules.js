@@ -13,21 +13,23 @@ export default function Guidelines() {
         <div className="callout-header">GUIDELINES</div>
         <div className="callout-container">
           <p>
-            <ul className="list-group">
-              <li className="list-group-item">The quiz will contain 20 question.</li>
+            <ol className="list-group" type='1'>
+              <li className="list-group-item">1. The quiz will contain 10 question.</li>
+              <li className="list-group-item">2. You will get 2 Minutes to answer all the questions.</li>
+              <li className="list-group-item">3. After two minutes, automatically result will be displayed.</li>
               <li className="list-group-item">
-                You can leave the quiz anytime.
+              4. You can leave the quiz anytime.
               </li>
               <li className="list-group-item">
-                Your score will be calculated automatically.
+              5. Your score will be calculated automatically.
               </li>
               <li className="list-group-item">
-                There are four options for a question.
+              6. There are four options for a question.You have to select any one of them.
               </li>
               <li className="list-group-item">
-                All questions have a single option correct.
+              7. All questions have a single option correct.
               </li>
-            </ul>
+            </ol>
           </p>
         </div>
         <div className="modal-footer">

@@ -16,6 +16,7 @@ import PageNotFound from "./components/PageNotFound";
 import Result from "./components/Result";
 import Feedback from "./components/Feedback"
 import FetchUsers from "./components/FetchUsers"
+import FetchFeedback from "./components/FetchFeedback"
 function App() {
   const [role, setRole] = useState();
   const [questions, setQuestions] = useState();
@@ -53,6 +54,7 @@ function App() {
                       <Routes>
                         <Route exact path="/adminhome" element={<HomeAdmin />} />
                         <Route exact path="/adminfetchusers" element={<FetchUsers />} />
+                        <Route exact path="/adminfetchfeedbacks" element={<FetchFeedback />} />
                         <Route exact path="/login" element={<Login showAlert={showAlert}/>} />
                         <Route path="*" element={<PageNotFound/>} />
                       </Routes>

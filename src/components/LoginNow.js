@@ -17,6 +17,10 @@ const LoginNow = ({fetchQuestions}) => {
     fetchQuestions();
     navigate("/quizrules")
   }
+  const handlelogout =()=>{
+    localStorage.removeItem('token');
+    navigate('/');
+  }
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -34,6 +38,7 @@ const LoginNow = ({fetchQuestions}) => {
           <button onClick={handlesignup} type="button" class="btn btn-light shadow mb-4 bg-white">SIGN UP NOW</button>
         </div>:<div className="bttn">
           <button onClick={handlestart} type="button" class="btn btn-light shadow mb-4 bg-white">START THE QUIZ</button>
+          <button onClick={handlelogout} type="button" class="btn btn-light shadow mb-4 bg-white">LOG OUT</button>
         </div>}
         
       </div>
